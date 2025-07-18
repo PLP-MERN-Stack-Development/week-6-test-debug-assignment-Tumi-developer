@@ -1,0 +1,30 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "Backend for MERN bug tracker",
+  "main": "server.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon server.js",
+    "test": "cross-env NODE_ENV=test jest --detectOpenHandles --forceExit",
+    "test:unit": "cross-env NODE_ENV=test jest --detectOpenHandles --forceExit --testPathPattern=unit",
+    "test:integration": "cross-env NODE_ENV=test jest --detectOpenHandles --forceExit --testPathPattern=integration",
+    "setup-test-db": "node tests/setupTestDB.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.0",
+    "express": "^5.1.0",
+    "mongoose": "^8.16.4"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "jest": "^30.0.4",
+    "mongodb-memory-server": "^8.10.1",
+    "nodemon": "^3.1.10",
+    "supertest": "^7.1.3"
+  }
+}
